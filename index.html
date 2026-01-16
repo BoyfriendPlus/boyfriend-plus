@@ -140,3 +140,39 @@
 
 </body>
 </html>
+<section class="card">
+  <div class="lang">JOIN</div>
+  <h2>Apply for Boyfriend Plus</h2>
+
+  <form id="joinForm" style="display:grid; gap:12px;">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="text" name="username" placeholder="Username" required>
+
+    <select name="service" required>
+      <option value="">Select Service</option>
+      <option>Friendly Chat</option>
+      <option>Emotional Support</option>
+      <option>Daily Motivation</option>
+      <option>Respectful Companion</option>
+      <option>Rental Boyfriend</option>
+    </select>
+
+    <input type="text" name="city" placeholder="Your City" required>
+    <input type="email" name="email" placeholder="Your Gmail ID" required>
+    <input type="tel" name="mobile" placeholder="Your Mobile Number" required>
+
+    <button type="submit" class="btn">Submit & Wait for Approval</button>
+  </form>
+
+  <p id="msg" style="display:none; text-align:center; margin-top:10px;">
+    Your request is sent. Please wait for approval.
+  </p>
+</section>
+
+<script>
+document.getElementById("joinForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("msg").style.display = "block";
+  this.reset();
+});
+</script>
