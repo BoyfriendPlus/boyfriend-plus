@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Yahan Google ka verification tag paste karo -->
-  <meta name="google-site-verification" content="YAHAN-GOOGLE-CODE" />
-
-  <title>Boyfriend Plus</title>
-
-  <style>.card, 
-.card h2, 
-.card p, 
-.card li {
-  color: #e5e7eb;
-}
+<
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boyfriend Plus</title>
+
   <style>
     body{font-family:Arial, sans-serif; margin:0; background:#0f172a; color:#e5e7eb;}
     header{
@@ -30,7 +15,6 @@
     }
     h1{margin:0; font-size:42px;}
     .tag{opacity:.95; font-size:18px; margin-top:10px;}
-    .hero-btn{margin-top:25px;}
     .container{max-width:900px; margin:auto; padding:30px 20px;}
     .card{
       background:#111827;
@@ -38,6 +22,7 @@
       padding:26px;
       margin-bottom:24px;
       box-shadow:0 10px 30px rgba(0,0,0,.35);
+      color:#e5e7eb;
     }
     .lang{font-size:12px; letter-spacing:.2em; color:#a5b4fc; margin-bottom:6px;}
     .btn{
@@ -49,12 +34,20 @@
       text-decoration:none;
       font-weight:bold;
       font-size:16px;
+      text-align:center;
     }
     .services li{margin:10px 0; font-size:16px;}
-    .trust{color:#9ca3af; font-size:14px;}
+    input, select{
+      padding:12px;
+      border-radius:10px;
+      border:none;
+      background:#0f172a;
+      color:#e5e7eb;
+    }
     footer{text-align:center; padding:24px; color:#9ca3af;}
   </style>
 </head>
+
 <body>
 
 <header>
@@ -63,14 +56,6 @@
     Aap akela mehsoos kar rahe ho? <br>
     Boyfriend Plus aapke saath hai.
   </p>
-  <div class="hero-btn">
-    <a class="btn" href="https://wa.me/919696291090" target="_blank">
-      Chat on WhatsApp
-    </a>
-    <p style="margin-top:10px; font-size:14px; color:#e5e7eb;">
-      Aap <strong>Kabir</strong> se baat karenge
-    </p>
-  </div>
 </header>
 
 <main class="container">
@@ -85,51 +70,72 @@
       <li>🤝 Respectful Companion</li>
       <li>🔒 100% Privacy & Safety</li>
       <li>🫶 Rental Boyfriend</li>
+    </ul>
   </section>
-<section class="card"> 
-  <div class="lang">ABOUT / ENGLISH</div>
-  <h2>About Us</h2>
-  <p>
-    <strong>Boyfriend Plus</strong> is a safe and respectful virtual companion platform.
-    We provide friendly conversation, emotional support, and positive company.
-  </p>
-</section>
 
-<section class="card">
-  <div class="lang">ABOUT / HINDI</div>
-  <h2>हमारे बारे में</h2>
-  <p>
-    <strong>Boyfriend Plus</strong> एक सुरक्षित और सम्मानजनक वर्चुअल कम्पैनियन प्लेटफॉर्म है।
-    यहाँ आपको दोस्ताना बातचीत और भावनात्मक सहारा मिलता है।
-  </p>
-</section>
+  <section class="card">
+    <div class="lang">ABOUT / ENGLISH</div>
+    <h2>About Us</h2>
+    <p>
+      <strong>Boyfriend Plus</strong> is a safe and respectful virtual companion platform.
+      We provide friendly conversation, emotional support, and positive company.
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="lang">ABOUT / HINDI</div>
+    <h2>हमारे बारे में</h2>
+    <p>
+      <strong>Boyfriend Plus</strong> एक सुरक्षित और सम्मानजनक वर्चुअल कम्पैनियन प्लेटफॉर्म है।
+      यहाँ आपको दोस्ताना बातचीत और भावनात्मक सहारा मिलता है।
+    </p>
+  </section>
 
   <section class="card" dir="rtl">
     <div class="lang">ABOUT / URDU</div>
     <h2>ہمارے بارے میں</h2>
     <p>
       <strong>Boyfriend Plus</strong> ایک محفوظ اور باعزت ورچوئل کمپینین پلیٹ فارم ہے۔
-      یہاں دوستانہ گفتگو، جذباتی سہارا اور مثبت ساتھ فراہم کیا جاتا ہے۔
-      یہ کوئی غیر اخلاقی یا غیر قانونی سروس نہیں ہے — ہمارا مقصد صرف عزت اور اچھا ساتھ دینا ہے۔
+      یہاں دوستانہ گفتگو اور جذباتی سہارا فراہم کیا جاتا ہے۔
     </p>
   </section>
 
+  <!-- FORM SECTION -->
   <section class="card">
-    <div class="lang">CONTACT</div>
-    <h2>Start a Conversation</h2>
-    <p>
-      Baat karne ke liye seedha WhatsApp par connect karein.
-      Hum yahan aapko sunne aur support dene ke liye hain.
+    <div class="lang">JOIN</div>
+    <h2>Apply for Boyfriend Plus</h2>
+
+    <form id="joinForm" style="display:grid; gap:12px;">
+      <input type="text" placeholder="Full Name" required>
+      <input type="text" placeholder="Username" required>
+
+      <select required>
+        <option value="">Select Service</option>
+        <option>Friendly Chat</option>
+        <option>Emotional Support</option>
+        <option>Daily Motivation</option>
+        <option>Respectful Companion</option>
+        <option>Rental Boyfriend</option>
+      </select>
+
+      <input type="text" placeholder="Your City" required>
+      <input type="email" placeholder="Your Gmail ID" required>
+      <input type="tel" placeholder="Your Mobile Number" required>
+
+      <button type="submit" class="btn">Submit & Wait for Approval</button>
+    </form>
+
+    <p id="msg" style="display:none; text-align:center; margin-top:10px;">
+      Your request is sent. Please wait for approval.
     </p>
-    <a class="btn" href="https://wa.me/919696291090" target="_blank">
-      Chat on WhatsApp
+
+    <!-- WhatsApp button will appear AFTER form submit -->
+    <a id="waBtn" class="btn"
+       href="https://wa.me/919696291090"
+       target="_blank"
+       style="display:none; margin-top:15px;">
+       Chat on WhatsApp (Kabir)
     </a>
-    <p style="margin-top:10px; font-size:14px; color:#9ca3af;">
-      Aap <strong>Kabir</strong> se baat karenge
-    </p>
-    <p class="trust">
-      No adult content • Respect & Safety First • Your privacy is our priority
-    </p>
   </section>
 
 </main>
@@ -138,41 +144,14 @@
   © 2026 Boyfriend Plus — Respect • Safety • Support
 </footer>
 
-</body>
-</html>
-<section class="card">
-  <div class="lang">JOIN</div>
-  <h2>Apply for Boyfriend Plus</h2>
-
-  <form id="joinForm" style="display:grid; gap:12px;">
-    <input type="text" name="fullname" placeholder="Full Name" required>
-    <input type="text" name="username" placeholder="Username" required>
-
-    <select name="service" required>
-      <option value="">Select Service</option>
-      <option>Friendly Chat</option>
-      <option>Emotional Support</option>
-      <option>Daily Motivation</option>
-      <option>Respectful Companion</option>
-      <option>Rental Boyfriend</option>
-    </select>
-
-    <input type="text" name="city" placeholder="Your City" required>
-    <input type="email" name="email" placeholder="Your Gmail ID" required>
-    <input type="tel" name="mobile" placeholder="Your Mobile Number" required>
-
-    <button type="submit" class="btn">Submit & Wait for Approval</button>
-  </form>
-
-  <p id="msg" style="display:none; text-align:center; margin-top:10px;">
-    Your request is sent. Please wait for approval.
-  </p>
-</section>
-
 <script>
 document.getElementById("joinForm").addEventListener("submit", function(e){
   e.preventDefault();
   document.getElementById("msg").style.display = "block";
+  document.getElementById("waBtn").style.display = "inline-block";
   this.reset();
 });
 </script>
+
+</body>
+</html>
