@@ -101,48 +101,50 @@
   </section>
 
   <!-- FORM SECTION -->
+
   <section class="card">
-    <div class="lang">JOIN</div>
-    <h2>Apply for Boyfriend Plus</h2>
+  <div class="lang">JOIN</div>
+  <h2>Apply for Boyfriend Plus</h2>
 
-    <form id="joinForm" style="display:grid; gap:12px;">
-      <input type="text" placeholder="Full Name" required>
-      <input type="text" placeholder="Username" required>
+  <form id="joinForm" style="display:grid; gap:12px;">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Username" required>
 
-      <select required>
-        <option value="">Select Service</option>
-        <option>Friendly Chat</option>
-        <option>Emotional Support</option>
-        <option>Daily Motivation</option>
-        <option>Respectful Companion</option>
-        <option>Rental Boyfriend</option>
-      </select>
+    <input type="date" placeholder="Date of Birth" required>
 
-      <input type="text" placeholder="Your City" required>
-      <input type="email" placeholder="Your Gmail ID" required>
-      <input type="tel" placeholder="Your Mobile Number" required>
+    <input type="text" placeholder="Country" required>
+    <input type="text" placeholder="State" required>
+    <input type="text" placeholder="City" required>
 
-      <button type="submit" class="btn">Submit & Wait for Approval</button>
-    </form>
+    <textarea placeholder="Address & Landmark" rows="3" required></textarea>
 
-    <p id="msg" style="display:none; text-align:center; margin-top:10px;">
-      Your request is sent. Please wait for approval.
-    </p>
+    <input type="email" placeholder="Gmail ID" required>
+    <input type="tel" placeholder="Mobile Number" required>
 
-    <!-- WhatsApp button will appear AFTER form submit -->
-    <a id="waBtn" class="btn"
-       href="https://wa.me/919696291090"
-       target="_blank"
-       style="display:none; margin-top:15px;">
-       Chat on WhatsApp (Kabir)
-    </a>
-  </section>
+    <select required>
+      <option value="">Select Service</option>
+      <option>Friendly Chat</option>
+      <option>Emotional Support</option>
+      <option>Daily Motivation</option>
+      <option>Respectful Companion</option>
+      <option>Rental Boyfriend</option>
+    </select>
 
-</main>
+    <button type="submit" class="btn">Submit & Wait for Approval</button>
+  </form>
 
-<footer>
-  © 2026 Boyfriend Plus — Respect • Safety • Support
-</footer>
+  <p id="msg" style="display:none; text-align:center; margin-top:10px;">
+    Your request is sent. Please wait for approval.
+  </p>
+
+  <!-- WhatsApp button will appear after submit -->
+  <a id="waBtn" class="btn"
+     href="https://wa.me/919696291090"
+     target="_blank"
+     style="display:none; margin-top:15px;">
+     Chat on WhatsApp (Kabir)
+  </a>
+</section>
 
 <script>
 document.getElementById("joinForm").addEventListener("submit", function(e){
@@ -152,6 +154,3 @@ document.getElementById("joinForm").addEventListener("submit", function(e){
   this.reset();
 });
 </script>
-
-</body>
-</html>
