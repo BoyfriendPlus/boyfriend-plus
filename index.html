@@ -106,23 +106,52 @@
   <div class="lang">JOIN</div>
   <h2>Apply for Boyfriend Plus</h2>
 
-  <form id="joinForm" style="display:grid; gap:12px;">
-    <input type="text
-" placeholder="Full Name" required>
-    <input type="text" placeholder="Username" required>
+  <form id="joinForm" style="display:grid; gap:10px;">
+
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <small>Enter your real full name.</small>
+
+    <input type="text" name="username" placeholder="Username" required>
+    <small>This name will be shown to others.</small>
+
+    <select name="gender" required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <small>Select your gender.</small>
 
     <label style="font-size:14px; color:#9ca3af;">Date of Birth</label>
-    <input type="date" required>
-    <input type="text" placeholder="Country" required>
-    <input type="text" placeholder="State" required>
-    <input type="text" placeholder="City" required>
+    <input type="date" name="dob" required>
+    <small>You must be 18+ to apply.</small>
 
-    <textarea placeholder="Address & Landmark" rows="3" required></textarea>
+    <select name="country" required>
+      <option value="">Select Country</option>
+      <option>India</option>
+      <option>Pakistan</option>
+      <option>Bangladesh</option>
+      <option>Nepal</option>
+      <option>Other</option>
+    </select>
+    <small>Choose your country.</small>
 
-    <input type="email" placeholder="Gmail ID" required>
-    <input type="tel" placeholder="Mobile Number" required>
+    <input type="text" name="state" placeholder="State" required>
+    <small>Your state or province.</small>
 
-    <select required>
+    <input type="text" name="city" placeholder="City" required>
+    <small>Your current city.</small>
+
+    <textarea name="address" placeholder="Address & Landmark" rows="3" required></textarea>
+    <small>Enter full address with landmark.</small>
+
+    <input type="email" name="email" placeholder="Gmail ID" required>
+    <small>All updates will be sent here.</small>
+
+    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+    <small>WhatsApp number preferred.</small>
+
+    <select name="service" required>
       <option value="">Select Service</option>
       <option>Friendly Chat</option>
       <option>Emotional Support</option>
@@ -130,6 +159,12 @@
       <option>Respectful Companion</option>
       <option>Rental Boyfriend</option>
     </select>
+    <small>Select the service you want.</small>
+
+    <label style="font-size:14px; color:#9ca3af;">
+      <input type="checkbox" required>
+      I confirm that I am 18 years or older
+    </label>
 
     <button type="submit" class="btn">Submit & Wait for Approval</button>
   </form>
@@ -138,7 +173,6 @@
     Your request is sent. Please wait for approval.
   </p>
 
-  <!-- WhatsApp button will appear after submit -->
   <a id="waBtn" class="btn"
      href="https://wa.me/919696291090"
      target="_blank"
@@ -150,8 +184,23 @@
 <script>
 document.getElementById("joinForm").addEventListener("submit", function(e){
   e.preventDefault();
+
+  const dob = new Date(this.dob.value);
+  const today = new Date();
+  let age = today.getFullYear() - dob.getFullYear();
+  const m = today.getMonth() - dob.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+    age--;
+  }
+
+  if (age < 18) {
+    alert("You must be 18+ to apply.");
+    return;
+  }
+
   document.getElementById("msg").style.display = "block";
   document.getElementById("waBtn").style.display = "inline-block";
   this.reset();
 });
 </script>
+  
