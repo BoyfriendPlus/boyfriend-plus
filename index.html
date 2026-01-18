@@ -102,56 +102,51 @@
 
   <!-- FORM SECTION -->
 
+  
   <section class="card">
   <div class="lang">JOIN</div>
-  <h2>Apply for Boyfriend Plus</h2>
+  <h2 style="text-align:center;">Apply for Boyfriend Plus</h2>
 
-  <form id="joinForm" style="display:grid; gap:10px;">
+  <form id="joinForm" style="display:grid; gap:14px;">
 
-    <input type="text" name="fullname" placeholder="Full Name" required>
-    <small>Enter your real full name.</small>
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name" required>
 
-    <input type="text" name="username" placeholder="Username" required>
-    <small>This name will be shown to others.</small>
+    <label>Username</label>
+    <input type="text" placeholder="Choose a username" required>
 
-    <select name="gender" required>
+    <label>Gender</label>
+    <select required>
       <option value="">Select Gender</option>
       <option>Male</option>
       <option>Female</option>
       <option>Other</option>
     </select>
-    <small>Select your gender.</small>
 
-    <label style="font-size:14px; color:#9ca3af;">Date of Birth</label>
-    <input type="date" name="dob" required>
-    <small>You must be 18+ to apply.</small>
+    <label>Date of Birth</label>
+    <input type="date" required>
+    <small style="color:#9ca3af;">You must be 18+ years old</small>
 
-    <select name="country" required>
-      <option value="">Select Country</option>
-      <option>India</option>
-      <option>Pakistan</option>
-      <option>Bangladesh</option>
-      <option>Nepal</option>
-      <option>Other</option>
-    </select>
-    <small>Choose your country.</small>
+    <label>Country</label>
+    <input type="text" placeholder="Your country" required>
 
-    <input type="text" name="state" placeholder="State" required>
-    <small>Your state or province.</small>
+    <label>State</label>
+    <input type="text" placeholder="Your state" required>
 
-    <input type="text" name="city" placeholder="City" required>
-    <small>Your current city.</small>
+    <label>City</label>
+    <input type="text" placeholder="Your city" required>
 
-    <textarea name="address" placeholder="Address & Landmark" rows="3" required></textarea>
-    <small>Enter full address with landmark.</small>
+    <label>Address & Landmark</label>
+    <textarea rows="3" placeholder="Full address with landmark" required></textarea>
 
-    <input type="email" name="email" placeholder="Gmail ID" required>
-    <small>All updates will be sent here.</small>
+    <label>Gmail ID</label>
+    <input type="email" placeholder="example@gmail.com" required>
 
-    <input type="tel" name="mobile" placeholder="Mobile Number" required>
-    <small>WhatsApp number preferred.</small>
+    <label>Mobile Number</label>
+    <input type="tel" placeholder="WhatsApp number" required>
 
-    <select name="service" required>
+    <label>Service</label>
+    <select required>
       <option value="">Select Service</option>
       <option>Friendly Chat</option>
       <option>Emotional Support</option>
@@ -159,48 +154,14 @@
       <option>Respectful Companion</option>
       <option>Rental Boyfriend</option>
     </select>
-    <small>Select the service you want.</small>
 
-    <label style="font-size:14px; color:#9ca3af;">
+    <label style="font-size:14px;">
       <input type="checkbox" required>
       I confirm that I am 18 years or older
     </label>
 
     <button type="submit" class="btn">Submit & Wait for Approval</button>
   </form>
+  </section>
 
-  <p id="msg" style="display:none; text-align:center; margin-top:10px;">
-    Your request is sent. Please wait for approval.
-  </p>
-
-  <a id="waBtn" class="btn"
-     href="https://wa.me/919696291090"
-     target="_blank"
-     style="display:none; margin-top:15px;">
-     Chat on WhatsApp (Kabir)
-  </a>
-</section>
-
-<script>
-document.getElementById("joinForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const dob = new Date(this.dob.value);
-  const today = new Date();
-  let age = today.getFullYear() - dob.getFullYear();
-  const m = today.getMonth() - dob.getMonth();
-  if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-    age--;
-  }
-
-  if (age < 18) {
-    alert("You must be 18+ to apply.");
-    return;
-  }
-
-  document.getElementById("msg").style.display = "block";
-  document.getElementById("waBtn").style.display = "inline-block";
-  this.reset();
-});
-</script>
   
